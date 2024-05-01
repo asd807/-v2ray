@@ -1,0 +1,18 @@
+V2Ray一键安装代码：
+bash <(curl -sL https://raw.githubusercontent.com/eujc/v2ray/main/xray.sh)
+yum install -y curl  #CentOS
+sudo apt install -y curl  #Ubuntu/Debian
+
+#放行端口
+iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+
+-----------------------------------------------------
+搭建原生ID
+1.准备一个域名，可以免费。
+登陆方式：https://www.gaofumei.net/networks/10271.html
+域名网站：https://my.freenom.com/clientarea.php
+解析网站：https://dash.cloudflare.com/
+2.准备一台服务器 目前选用（66云服务器）
+网站：https://666clouds.com/clientarea.php
+3.搭建的脚本软件：https:finalshell
